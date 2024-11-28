@@ -31,3 +31,8 @@ UPDATE PARAMETROS SET FECHA_ACTUALIZACION = LOCALTIMESTAMP(3) WHERE ID = 1;
 C:\Users\femer>redis-cli
 get map-parametros:param1
 ![image](https://github.com/user-attachments/assets/33bb7d86-1dbe-412c-9072-3791f3644568)
+
+
+curl -o output.txt -L "http://localhost:9100/api/redis/parametros"
+
+curl -o output.txt -L "http://localhost:9100/api/redis/parametros/map-parametros:param1"![image](https://github.com/user-attachments/assets/4e6381c3-e512-4955-b752-e416c7d2a123)
