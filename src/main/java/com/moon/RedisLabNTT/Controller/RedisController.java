@@ -30,9 +30,9 @@ public class RedisController {
     
     @GetMapping("/parametros/{clave}")
     public ResponseEntity<Object> getParametroFromRedis(@PathVariable String clave) {
-        String redisKey = "map-parametros:" + clave;
+        //String redisKey = "map-parametros:" + clave;
         try {
-            Parametro parametro = redisService.get(redisKey);
+            Parametro parametro = redisService.get(clave);
         
             if (parametro != null) {
             	System.out.println("Parametro encontrado: " + parametro);
